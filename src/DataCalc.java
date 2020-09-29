@@ -22,20 +22,9 @@ public class DataCalc { //Расчет
                 result = (int)(a1 * a2);
                 result_f[0] = result;//Загоняем результат в массив
                 break;
-            case '/':  //А вот тут надо проверку, чтобы делилось целиком
-                float temp_result = 0;
-                temp_result = a1 / a2; //загоняем результат в float
-                temp_result = Math.round(temp_result); //Округление по правилам математики
-                result_f[0] = (int)temp_result; //Преобразуем в int и загон
-                //result_f[0] = result;//Загоняем результат в массив
-                /* Оставлю кусок на всякий случай. Это прверка на числа, которые делятся нацело
-                    if (temp_result != Math.round()){ //Сравнивам результат
-                        result_f[0] = -100;//Это для сообщения о неправильных параметрах
-                }
-                else {
-                    result = (int)temp_result; //Целое число, ок
-                    result_f[0] = result;//Загоняем результат в массив
-               }*/
+            case '/':
+                result_f[0] = (int)(a1/a2);
+
                break;
 
             default:
